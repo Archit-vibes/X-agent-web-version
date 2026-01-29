@@ -54,7 +54,7 @@ const Mentions = () => {
       });
   };
 
-  if (!authenticated && loading) { // specific case where we might be checking auth
+  if (!authenticated && loading) { 
     return (
       <div style={styles.center}>
         <p style={styles.text}>Checking authentication...</p>
