@@ -25,6 +25,5 @@ SessionLocal = scoped_session(
 # Base class for models
 Base = declarative_base()
 
-print("DB PATH:", engine.url)
 
 
