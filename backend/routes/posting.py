@@ -6,8 +6,6 @@ from backend.db import SessionLocal
 from backend.models import Reply
 from auth.storage import user_tokens
 
-
-# api_key = os.getenv()
 posting_bp = Blueprint("posting", __name__, url_prefix="/api/posting")
 
 url = "https://api.x.com/2/tweets"
@@ -80,5 +78,3 @@ def auto_post():
     finally:
         db.close()
 
-
-# https://x.com/nickdotkasper/status/2014778229664711050

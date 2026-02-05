@@ -34,7 +34,7 @@ class Reply(Base):
     __tablename__ = "replies"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    target_tweet_id = Column(String, nullable=False, index=True)  # 👈 REQUIRED
+    target_tweet_id = Column(String, nullable=False, index=True)
     post_text = Column(Text, nullable=False)
     reply_text = Column(Text, nullable=False)
     status = Column(String, default="generated")

@@ -13,13 +13,11 @@ def filtered_posts():
     db = SessionLocal()
 
     try:
-        # 1️⃣ Read posts already stored in DB
         posts = db.query(Post).all()
 
         if not posts:
             return jsonify([])
 
-        # 2️⃣ Build corpus from DB data
         corpus = [p.text for p in posts]
 
         query = "hiring internship job opening engineer developer"
@@ -28,7 +26,6 @@ def filtered_posts():
 
         results = []
 
-        # 3️⃣ Filter + score
         for post in posts:
             score = hybrid_score(post.text, vectorizer, query_vec)
 

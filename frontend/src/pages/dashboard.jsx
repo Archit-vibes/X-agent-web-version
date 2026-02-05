@@ -9,7 +9,7 @@ const Dashboard = () => {
   useEffect(() => {
     fetch("http://localhost:5000/auth/check", {
       method: "GET",
-      credentials: "include", // IMPORTANT
+      credentials: "include",
     })
       .then((res) => res.json())
       .then((data) => {

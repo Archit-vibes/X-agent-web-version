@@ -7,7 +7,6 @@ replies_bp = Blueprint("replies", __name__, url_prefix="/api/replies")
 
 @replies_bp.route("/generate", methods=["POST"])
 def generate_replies():
-    """Triggers the LLM generation process for filtered posts."""
     try:
         new_replies = generate_replies_for_filtered_posts()
         return jsonify({"message": "Replies generated successfully", "count": len(new_replies), "replies": new_replies}), 200
@@ -16,7 +15,6 @@ def generate_replies():
 
 @replies_bp.route("/list", methods=["GET"])
 def list_replies():
-    """Fetches all saved replies from the database."""
     db = SessionLocal()
     try:
         replies = db.query(Reply).all()

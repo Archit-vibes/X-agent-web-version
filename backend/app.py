@@ -1,12 +1,11 @@
 import sys
 import os
 
-# Add parent directory to path so we can import sibling modules
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from flask import Flask
 from flask_session import Session
-from flask_cors import CORS   # ✅ ADD THIS
+from flask_cors import CORS
 from auth.routes import auth_bp
 from routes.posts import posts_bp
 from routes.mentions import mentions_bp
@@ -14,10 +13,8 @@ from routes.filtered_posts import filtered_bp
 from routes.replies import replies_bp
 from routes.posting import posting_bp
 from db import Base, engine
-import backend.models  # Ensure models are registered
 
 
-# Create all database tables
 Base.metadata.create_all(bind=engine)
 
 app = Flask(__name__)
@@ -30,7 +27,6 @@ app.config.update(
 )
 
 
-# ✅ ADD THIS BLOCK (nothing else changes)
 CORS(
     app,
     supports_credentials=True,
