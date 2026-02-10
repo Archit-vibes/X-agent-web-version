@@ -7,7 +7,7 @@
     An agentic system that authenticates with X (Twitter), tracks posts and mentions, filters high-intent leads, generates AI-powered replies, and auto-posts them through a unified dashboard.
     <br />
     <br />
-    <a href="https://github.com/Archit-vibes/X-agent-web-version">View Demo</a>
+    <a href="https://youtu.be/ZiCuPTQJVkI?si=5hVPZwP9QzuxUJas">View Demo</a>
     &middot;
     <a href="https://github.com/Archit-vibes/X-agent-web-version/issues">Report Bug</a>
     &middot;
