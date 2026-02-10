@@ -1,7 +1,7 @@
 <!-- Improved compatibility of back to top link -->
 <a id="readme-top"></a>
 
-<h3 align="center">X Lead Qualification & Auto-Reply Agent</h3>
+<h3 align="center">X Auto-Marketing & Auto-Reply Agent</h3>
 
   <p align="center">
     An agentic system that authenticates with X (Twitter), tracks posts and mentions, filters high-intent leads, generates AI-powered replies, and auto-posts them through a unified dashboard.
